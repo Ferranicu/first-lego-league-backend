@@ -110,8 +110,7 @@ public class ManageVenueStepDefs {
 
 	@And("^The venue with name \"([^\"]*)\" has city \"([^\"]*)\"$")
 	public void theVenueWithNameHasCity(String name, String city) {
-		Venue venue = findVenueByName(name);
-		assertEquals(city, venue.getCity());
+		aVenueWithNameAndCityExists(name, city);
 	}
 
 	@And("^No venue with name \"([^\"]*)\" exists$")
